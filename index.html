@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitnessWeb</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/commonStyle.css">
+    <link rel="stylesheet" href="./css/homeStyle.css">
+    <link rel="preload" href="https://fonts.googleapis.com">
+    <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header-container">
@@ -18,45 +20,147 @@
                         <h1>Fitness Club</h1>
                     </div>
                     <ul class="navbar-options">
-                            <li><a href="#">ABOUT US</a></li>
-                            <li><a href="#">SERVICE </a></li>
-                            <li><a href="#">MEMBERSHIP</a></li>
-                            <li><a href="#">CONTACT</a></li> 
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./pages/memberships.html">Memberships</a></li>
+                            <li><a href="./pages/staff.html">Staff</a></li>
+                            <li><a href="./pages/contact.html">Contact us</a></li> 
                     </ul>
                     <button class="hamburger-menu">
-                      <img src="/img/menu-icon.png" alt="Menu" class="menu-icon-default">
-                      <img src="/img/menu-icon-black.png" alt="Menu Bar" class="menu-icon-scrolled">
+                      <img src="./img/menu-icon.png" alt="Menu" class="menu-icon-default">
+                      <img src="./img/menu-icon-black.png" alt="Menu Bar" class="menu-icon-scrolled">
                     </button>
                 </nav>
             </div>
     </header>
     <main>
-       
-        <section>
-            <h1>body</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt culpa corrupti voluptas, facilis nostrum nihil quos id animi, eaque blanditiis? Ratione asperiores omnis dolores officia itaque repellendus est dolorem?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt culpa corrupti voluptas, facilis nostrum nihil quos id animi, eaque blanditiis? Ratione asperiores omnis dolores officia itaque repellendus est dolorem?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt culpa corrupti voluptas, facilis nostrum nihil quos id animi, eaque blanditiis? Ratione asperiores omnis dolores officia itaque repellendus est dolorem?</p>
+        <section class="about-us">
+            <div class="about-us-title">
+                <h2>ABOUT US</h2>
+            </div>
+            <div class="separator"></div>
+            <div class="about-us-content">
+                <div class="about-us-image">
+                    <img src="./img/about_us.jpg" alt="About Us Image">
+                </div>
+                <div class="about-us-information">
+                    <p>We are passionate about motivating people of all levels to improve their lifestyle through sports. We offer machine and functional training adapted to your needs.</p>
+                    <p>Join our community and discover how we can help you become physically strong and mentally indestructible.</p>
+                </div>
+        </div>
+        </section>
+        <section class="group-exercise">
+            <div class="exercise-content">
+                <h2>GROUP EXERCISE</h2>
+                <p>Get fit on your terms. All fitness levels and abilities welcome, from first-timers to seasoned athletes.</p>
+            </div>
+            <div class="separator"></div>
+            <div class="exercise-info">
+                <div class="exercise-icons">
+                    <div class="icon-box">
+                        <img src="./img/fitness_classes.png" alt="Unlimited Icon">
+                        <h3>UNLIMITED</h3>
+                        <p>Challenge yourself, not your bank account.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./img/personal_trainer.png" alt="All-Inclusive Icon">
+                        <h3>ALL-INCLUSIVE</h3>
+                        <p>Classes, studios, specialty workshops and more.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./img/fitness_studio _.png" alt="Expert Instruction Icon">
+                        <h3>EXPERT INSTRUCTION</h3>
+                        <p>The best instructors from the top studios.</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./img/yoga_class.png" alt="Convenience Icon">
+                        <h3>CONVENIENCE</h3>
+                        <p>Everything you need, all under one roof.</p>
+                    </div>
+                </div>
+                <div class="exercise-image">
+                    <img src="./img/exercise_group.jpg" alt="Exercise Image">
+                </div>
+            </div>
+        </section>
+        <section class="amenities-section">
+            <h2>AMENITIES</h2>
+            <div class="amenities-information">
+                <p class="section-description">Modern design and comfortable, all-inclusive luxury. With our extensive range of amenities, that includes sprawling outdoor terraces, we offer a space unlike any other in Melbourne. You'll love your time here.</p>
+            </div>
+            <div class="separator"></div>
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <h3>Swimming Pool</h3>
+                    <img src="./img/pool.jpg" alt="Swimming Pool">
+                    <p>A state-of-the-art swimming pool designed for relaxation and fitness.</p>
+                </div>
+                <div class="amenity-item">
+                    <h3>Fitness Studio</h3>
+                    <img src="./img/gym.jpg" alt="Gym">
+                    <p>Equipped with modern machines and a variety of fitness programs.</p>
+                </div>
+                <div class="amenity-item">
+                    <h3>Luxury Lounge</h3>
+                    <img src="./img/lounge.jpeg" alt="Lounge">
+                    <p>A cozy and sophisticated space perfect for unwinding and socializing.</p>
+                </div>
+                <div class="amenity-item">
+                    <h3>Basketball Court</h3>
+                    <img src="./img/basketball-court.jpeg" alt="Basketball Court">
+                    <p>An indoor court ideal for both recreational and competitive play.</p>
+                </div>
+                <div class="amenity-item">
+                    <h3>Sauna</h3>
+                    <img src="./img/sauna.jpeg" alt="Sauna">
+                    <p>Experience the ultimate relaxation in our high-quality sauna.</p>
+                </div>
+                <div class="amenity-item">
+                    <h3>Outdoor Fitness Area</h3>
+                    <img src="./img/outdoor-workout.jpeg" alt="Outdoor Fitness">
+                    <p>A spacious outdoor area designed for group exercises and fresh-air workouts.</p>
+                </div>
+            </div>
         </section>
     </main>
-    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+            <div class="footer-logo">Fitness Club</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg class="icon-contact" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M168 0C75.1 0 0 75.1 0 168c0 87.8 151.7 282.8 163.5 298.4c5.1 6.7 15.9 6.7 21 0C232.3 450.8 384 255.8 384 168C384 75.1 308.9 0 216 0zM216 256c-48.6 0-88-39.4-88-88s39.4-88 88-88s88 39.4 88 88s-39.4 88-88 88z"/>
+                    </svg>
+                    <p>123 Fitroyz Street, CA 12345</p>
+                </div>
+                <div class="contact-item">
+                    <svg class="icon-contact" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M511.1 382.1c-1.1-8.7-3.7-17.3-8.4-25c-9.7-15.5-27-26.1-46.1-26.1h-50.5c-16.8 0-33.1 7.8-43.6 20.5l-30.7 38.7c-57.2-31.2-103.8-77.8-135.1-135.1l38.7-30.7c12.7-10.5 20.5-26.8 20.5-43.6V55.5c0-19.2-10.6-36.4-26.1-46.1c-7.7-4.7-16.2-7.2-25-8.4C115.8-2.8 100.5 1.3 89.5 12.3L35.4 66.5C12.7 89.2 0 120.4 0 153.5C0 341.7 170.3 512 358.5 512c33.1 0 64.3-12.7 87-35.4l54.2-54.2C510.7 411.5 514.8 396.2 511.1 382.1z"/>
+                    </svg>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+          <div class="footer-column">
+            <p>Follow us on:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                  <svg class="icon-svg" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+              </a>
+                <a href="https://www.facebook.com" target="_blank">
+                  <svg class="icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+              </a>
+              <a href="https://www.twitter.com" target="_blank">
+                  <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16"> <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+              </a>
+               
+            </div>
+        </div>
+          <div class="footer-column">
+              <p>&copy; 2024 Fitness club - All Rights Reserved.</p>
+          </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>  
 </body>
-<script>
-    window.addEventListener('scroll', function () {
-      const navbar = document.querySelector('.navbar-container');
-      if (window.scrollY > 50) { 
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.remove('navbar-scrolled');
-      }
-    });
-
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navbarOptions = document.querySelector('.navbar-options');
-
-      hamburgerMenu.addEventListener('click', function() {
-        navbarOptions.classList.toggle('open');
-      });
-      
-  </script>
 </html>

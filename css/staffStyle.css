@@ -1,0 +1,93 @@
+@import './commonStyle.css';
+
+.header-container{
+    background-image: url('../img/staff_background.jpg');
+}
+.staff-section {
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .staff-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 900px) {
+    .staff-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .staff-container {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  .staff-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .staff-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .staff-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .staff-role {
+    font-size: 1.2rem;
+    color: var(--text-color-hover)
+  }
+  
+  .staff-description {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 1rem;
+  }
+  
+  .staff-hobbies {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+
+  @media (max-width: 768px) {
+    .staff-card {
+      padding: 1rem;
+    }
+  
+    .staff-name {
+      font-size: 1.25rem;
+    }
+  
+    .staff-role {
+      font-size: 1rem;
+    }
+  
+    .staff-description {
+      font-size: 0.9rem;
+    }
+  }
