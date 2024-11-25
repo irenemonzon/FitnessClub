@@ -1,7 +1,7 @@
 @import './commonStyle.css';
 
 .header-container{
-    background-image: url('../img/staff_background.jpg');
+    background-image: url('../img/staff_background.webp');
 }
 .staff-section {
     padding: 2rem 4rem;
