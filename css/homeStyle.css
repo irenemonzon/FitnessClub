@@ -10,16 +10,13 @@
 
 .about-us-content {
     display:flex;
-    animation: slideInLeft 1.5s ease forwards;
-    opacity: 0;
+  
 }
 
 .about-us-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
-    opacity: 0;
-    animation: slideInRight 1.5s ease forwards;
 }
 
  
@@ -29,8 +26,6 @@
     justify-content: center;
     padding: 0rem 1rem 0 3rem;
     max-width: 500px;
-    opacity: 0;
-    animation: slideInLeft 1.5s ease forwards;
 }
 .about-us-information p{
     margin-top: 10px;
@@ -42,13 +37,12 @@
     align-items: center;
     gap: 2rem;
     padding: 24px;
+    margin:40px 0;
     overflow: hidden;
 }
 
 .exercise-content {
     text-align: center;
-    animation: slideInLeft 1.5s ease forwards;
-    opacity: 0;
 }
 
 
@@ -65,15 +59,13 @@
 .exercise-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     flex: 1 1 60%;
 }
 
 .icon-box {
     flex: 1 1 45%;
     text-align: center;
-    animation: slideInLeft 1.5s ease forwards;
-    opacity: 0;
 }
 .icon-box h3,
 .amenity-item h3{
@@ -107,37 +99,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    animation: slideInRight 1.5s ease forwards;
+   
 }
 
 .exercise-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
-}
-
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 .amenities-section {
@@ -198,6 +166,15 @@
  
 }
 @media (max-width: 480px) {
+    .about-us-image img{
+        max-width: 250px;
+    }
+    .exercise-icons {
+      
+        gap: 2rem;
+       
+    }
+    
     .amenities-information{
         width: 90%;
     }

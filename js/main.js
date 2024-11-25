@@ -28,12 +28,9 @@ const currentUrl = window.location.href;
 
 const navbarLinks = document.querySelectorAll('.navbar-options li a');
 
-
 navbarLinks.forEach(link => {
-  console.log(link.href )
-   
+
     if (link.href === currentUrl) {
-      console.log('entra aqui')
         link.classList.add('active');
     }
 })
