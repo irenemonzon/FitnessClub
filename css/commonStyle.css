@@ -35,7 +35,10 @@ body{
     background-blend-mode: overlay;
     background-color: rgba(24, 23, 23, 0.2);
     margin-bottom: 30px;
-   
+    transition: background-image 0.5s ease-in-out; 
+}
+.header-container.loaded {
+    background-image: url('../img/background2.webp');
 }
 .header-container p{
     color: var(--bg-color);

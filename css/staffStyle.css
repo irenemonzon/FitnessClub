@@ -2,6 +2,10 @@
 
 .header-container{
     background-image: url('../img/staff_background.webp');
+    transition: background-image 0.5s ease-in-out; 
+}
+.header-container.loaded {
+  background-image: url('../img/staff_background.webp'); 
 }
 .staff-section {
     padding: 2rem 4rem;

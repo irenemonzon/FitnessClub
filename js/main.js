@@ -34,3 +34,12 @@ navbarLinks.forEach(link => {
         link.classList.add('active');
     }
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const headerContainer = document.querySelector('.header-container');
+  const img = new Image();
+  img.src = './img/background2.webp'; // Imagen completa
+  img.onload = () => {
+      headerContainer.classList.add('loaded');
+  };
+});
