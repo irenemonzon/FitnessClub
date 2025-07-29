@@ -4,13 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitnessWeb</title>
-    <link rel="stylesheet" href="./css/commonStyle.css">
-    <link rel="stylesheet" href="./css/homeStyle.css">
+    <link rel="preload" href="./img/background2.webp" as="image" fetchpriority="high">
     <link rel="preload" href="https://fonts.googleapis.com">
     <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900" rel="stylesheet">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="preload" href="./img/background2.webp" as="image" fetchpriority="high">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", Arial, sans-serif;
+        }
+        
+        .header-container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2c2c2c;
+            background-image: url('./img/background2.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            margin-bottom: 30px;
+        }
+        
+        .header-container p {
+            color: #f6f4f1;
+            font-weight: 700;
+            width: 40%;
+            text-align: center;
+            font-size: 5rem;
+            animation: move-text 2s ease-out forwards;
+        }
+        
+        @keyframes move-text {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(30%);
+                opacity: 1;
+            }
+        }
+        
+        .navbar-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            z-index: 1000;
+            background-color: transparent;
+            transition: background-color 0.4s ease-in-out;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 3;
+        }
+        
+        .navbar-logo h1 {
+            color: #f0f0f0;
+            transition: color 0.4s ease-in-out;
+        }
+        
+        .navbar-options {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .navbar-options li {
+            margin: 15px 10px;
+        }
+        
+        .navbar-options li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.4s ease-in-out;
+            padding: 10px;
+        }
+        
+        .navbar-options li a:hover {
+            color: #b32b09;
+        }
+        
+        .hamburger-menu {
+            display: none;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+        
+        .hamburger-menu img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            transition: opacity 0.4s ease-in-out;
+        }
+        
+        .menu-icon-default {
+            opacity: 1;
+        }
+        
+        .menu-icon-scrolled {
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-options {
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: rgba(23, 20, 23, 0.95);
+                width: 100%;
+                height: 100vh;
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .hamburger-menu {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container p {
+                font-size: 3rem;
+                width: 70%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/commonStyle.css" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="./css/homeStyle.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="./css/commonStyle.css">
+        <link rel="stylesheet" href="./css/homeStyle.css">
+    </noscript>
 </head>
 <body>
     <header class="header-container">
@@ -41,7 +192,7 @@
             <div class="separator"></div>
             <div class="about-us-content">
                 <div class="about-us-image">
-                    <img src="./img/about_us.jpg" alt="About Us Image">
+                    <img src="./img/about_us.jpg" alt="About Us Image" loading="lazy">
                 </div>
                 <div class="about-us-information">
                     <p>We are passionate about motivating people of all levels to improve their lifestyle through sports. We offer machine and functional training adapted to your needs.</p>
@@ -58,28 +209,28 @@
             <div class="exercise-info">
                 <div class="exercise-icons">
                     <div class="icon-box">
-                        <img src="./img/fitness_classes.png" alt="Unlimited Icon">
+                        <img src="./img/fitness_classes.png" alt="Unlimited Icon" loading="lazy">
                         <h3>UNLIMITED</h3>
                         <p>Challenge yourself, not your bank account.</p>
                     </div>
                     <div class="icon-box">
-                        <img src="./img/personal_trainer.png" alt="All-Inclusive Icon">
+                        <img src="./img/personal_trainer.png" alt="All-Inclusive Icon" loading="lazy">
                         <h3>ALL-INCLUSIVE</h3>
                         <p>Classes, studios, specialty workshops and more.</p>
                     </div>
                     <div class="icon-box">
-                        <img src="./img/fitness_studio _.png" alt="Expert Instruction Icon">
+                        <img src="./img/fitness_studio _.png" alt="Expert Instruction Icon" loading="lazy">
                         <h3>EXPERT INSTRUCTION</h3>
                         <p>The best instructors from the top studios.</p>
                     </div>
                     <div class="icon-box">
-                        <img src="./img/yoga_class.png" alt="Convenience Icon">
+                        <img src="./img/yoga_class.png" alt="Convenience Icon" loading="lazy">
                         <h3>CONVENIENCE</h3>
                         <p>Everything you need, all under one roof.</p>
                     </div>
                 </div>
                 <div class="exercise-image">
-                    <img src="./img/exercise_group.jpg" alt="Exercise Image">
+                    <img src="./img/exercise_group.jpg" alt="Exercise Image" loading="lazy">
                 </div>
             </div>
         </section>
@@ -92,32 +243,32 @@
             <div class="amenities-grid">
                 <div class="amenity-item">
                     <h3>Swimming Pool</h3>
-                    <img src="./img/pool.jpg" alt="Swimming Pool">
+                    <img src="./img/pool.jpg" alt="Swimming Pool" loading="lazy">
                     <p>A state-of-the-art swimming pool designed for relaxation and fitness.</p>
                 </div>
                 <div class="amenity-item">
                     <h3>Fitness Studio</h3>
-                    <img src="./img/gym.jpg" alt="Gym">
+                    <img src="./img/gym.jpg" alt="Gym" loading="lazy">
                     <p>Equipped with modern machines and a variety of fitness programs.</p>
                 </div>
                 <div class="amenity-item">
                     <h3>Luxury Lounge</h3>
-                    <img src="./img/lounge.jpeg" alt="Lounge">
+                    <img src="./img/lounge.jpeg" alt="Lounge" loading="lazy">
                     <p>A cozy and sophisticated space perfect for unwinding and socializing.</p>
                 </div>
                 <div class="amenity-item">
                     <h3>Basketball Court</h3>
-                    <img src="./img/basketball-court.jpeg" alt="Basketball Court">
+                    <img src="./img/basketball-court.jpeg" alt="Basketball Court" loading="lazy">
                     <p>An indoor court ideal for both recreational and competitive play.</p>
                 </div>
                 <div class="amenity-item">
                     <h3>Sauna</h3>
-                    <img src="./img/sauna.jpeg" alt="Sauna">
+                    <img src="./img/sauna.jpeg" alt="Sauna" loading="lazy">
                     <p>Experience the ultimate relaxation in our high-quality sauna.</p>
                 </div>
                 <div class="amenity-item">
                     <h3>Outdoor Fitness Area</h3>
-                    <img src="./img/outdoor-workout.jpeg" alt="Outdoor Fitness">
+                    <img src="./img/outdoor-workout.jpeg" alt="Outdoor Fitness" loading="lazy">
                     <p>A spacious outdoor area designed for group exercises and fresh-air workouts.</p>
                 </div>
             </div>
