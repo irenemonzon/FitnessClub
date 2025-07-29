@@ -1,6 +1,7 @@
 @import './commonStyle.css';
 
 .header-container{
+    background-color: #2d2d2d; 
     background-image: url('../img/staff_background.webp');
 }
 .staff-section {

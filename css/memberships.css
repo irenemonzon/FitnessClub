@@ -2,6 +2,7 @@
 
 
 .header-container{
+    background-color: #3a3a3a; 
     background-image: url('../img/membership.webp');
 }
 .membership-section {
